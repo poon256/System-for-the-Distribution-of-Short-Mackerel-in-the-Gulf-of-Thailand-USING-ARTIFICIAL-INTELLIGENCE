@@ -1,0 +1,12 @@
+folder output : ผลลัพธ์กราฟที่ได้จาก predict Regression_Linear ตามปีที่ระบุไว้
+ไฟล์ python : ตัวเทรนผลลัพธ์
+ไฟล์ ข้อมูลดิบ : mackerel_upper_gulf, marine_environment ใช้เทรน
+
+-------------------------------------------------------------------------
+[bash install]
+
+pip install -U scikit-learn
+pip install pandas
+pip install matplotlib
+pip install pymysql
+pip install mysql-connector-python

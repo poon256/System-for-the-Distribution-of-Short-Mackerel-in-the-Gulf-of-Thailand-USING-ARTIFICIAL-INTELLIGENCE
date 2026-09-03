@@ -1,0 +1,147 @@
+body{
+
+    margin:0;
+
+    background:#f5f7fa;
+
+}
+
+/* Hero Background */
+
+.hero-section{
+
+    background-image:url("../img/bg.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    min-height:100vh;
+
+    padding-top:120px;
+
+    padding-bottom:60px;
+
+}
+
+/* Main Container */
+
+.hero-box{
+
+    background:rgba(0,0,0,.50);
+
+    backdrop-filter:blur(6px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+/* Text */
+
+.hero-box h1{
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+.hero-box p{
+
+    color:#f1f1f1;
+
+}
+
+/* Dashboard */
+
+.dashboard-card{
+
+    background:rgba(255,255,255,.95);
+
+    border:none;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.dashboard-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.dashboard-card h5{
+
+    color:#6c757d;
+
+    font-size:15px;
+
+}
+
+.dashboard-card h2{
+
+    color:#0d6efd;
+
+    font-weight:700;
+
+}
+
+.dashboard-card p{
+
+    color:#6c757d;
+
+    margin-bottom:0;
+
+}
+
+/* Spawning Card */
+
+.spawning-card{
+
+    background:rgba(0,0,0,.70);
+
+    border-left:5px solid #ffc107;
+
+    border-radius:12px;
+
+    padding:18px;
+
+    margin-top:20px;
+
+    text-align:left;
+
+}
+
+.spawning-card h5{
+
+    color:#ffc107;
+
+    margin-bottom:8px;
+
+}
+
+.spawning-card p{
+
+    color:white;
+
+    margin-bottom:0;
+
+}
+
+/* Button */
+
+.btn-lg{
+
+    border-radius:10px;
+
+    font-weight:600;
+
+}

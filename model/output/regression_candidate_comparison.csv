@@ -1,0 +1,6 @@
+﻿name,target_transform,model_type,alpha,n_components,blend_weight,rmse,mae,r2
+"PLS Environment Relationship components=2, weight=0.75",none,pls,0.0,2,0.75,67.7628,45.3652,0.002417
+Ecology Relationship OLS + 50% Baseline,none,ols,0.0,0,0.5,68.7283,48.1656,-0.026215
+Environment Relationship OLS + 50% Baseline,none,ols,0.0,0,0.5,68.7378,47.3755,-0.026499
+"PLS Environment Relationship components=2, weight=0.50",none,pls,0.0,2,0.5,68.821,47.978,-0.028983
+"PLS Environment Relationship components=3, weight=0.50",none,pls,0.0,3,0.5,69.1379,48.9353,-0.038483

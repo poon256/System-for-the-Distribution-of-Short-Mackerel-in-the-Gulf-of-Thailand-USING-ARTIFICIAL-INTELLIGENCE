@@ -1,0 +1,29 @@
+for eq_id in df['equipment_id'].unique():
+    eq_mask = df['equipment_id'] == eq_id
+    df_eq = df[eq_mask].copy()
+    
+    if len(df_eq) >= 3:
+        features = ["sst", "chlorophyll_a", "rainfall", "wind_speed"]
+        X = df_eq[features].copy()
+        
+        scaler = StandardScaler()
+        X_scaled = scaler.fit_transform(X)
+        
+        kmeans = KMeans(n_clusters=3, random_state=42, n_init=20)
+        df_eq['cluster'] = kmeans.fit_predict(X_scaled)
+        
+        # ==========================================
+        # เพิ่มส่วนนี้: คำนวณและแสดงค่า Silhouette Score ของแต่ละอุปกรณ์
+        # ==========================================
+        score_eq = silhouette_score(X_scaled, df_eq['cluster'])
+        print(f"อุปกรณ์รหัส: {eq_id} | Silhouette Score = {score_eq:.4f}")
+        # ==========================================
+        
+        # จัดเรียงรหัสกลุ่มใหม่ตามปริมาณปลา (0=น้อย, 1=กลาง, 2=มาก)
+        means = df_eq.groupby('cluster')['amount'].mean().sort_values()
+        mapping = {old_cluster: new_id for new_id, old_cluster in enumerate(means.index)}
+        df_eq['cluster'] = df_eq['cluster'].map(mapping)
+        
+        df.loc[eq_mask, 'cluster'] = df_eq['cluster']
+
+print("--- จัดกลุ่มแยกตามอุปกรณ์เสร็จสิ้น ---")

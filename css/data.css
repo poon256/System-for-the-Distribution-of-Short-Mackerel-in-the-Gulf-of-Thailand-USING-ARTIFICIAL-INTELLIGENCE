@@ -1,0 +1,231 @@
+body{
+
+    background:#f5f7fa;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* Layout */
+
+.page-container{
+
+    flex:1;
+
+    margin-top:100px;
+
+    margin-bottom:40px;
+
+}
+
+/* Page Title */
+
+.page-title,
+.page-header{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+}
+
+.page-title,
+.page-header h2{
+
+    font-weight:700;
+
+}
+
+/* Card */
+
+.card{
+
+    border:none;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+}
+
+/* Card Header */
+
+.card-header{
+
+    background:#34495e;
+
+    color:white;
+
+    font-weight:600;
+
+    border:none;
+
+    padding:12px 18px;
+
+}
+
+/* Summary Card */
+
+.summary-card{
+
+    transition:.3s;
+
+}
+
+.summary-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.summary-card h2{
+
+    color:#0d6efd;
+
+    font-weight:700;
+
+}
+
+/* Result Card */
+
+.result-card{
+
+    height:100%;
+
+    transition:.3s;
+
+}
+
+.result-card:hover{
+
+    transform:translateY(-4px);
+
+}
+
+.result-card .card-body{
+
+    min-height:160px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.result-card h2{
+
+    font-weight:700;
+
+    margin-bottom:5px;
+
+}
+
+.result-card small{
+
+    color:#6c757d;
+
+}
+
+/* Alert */
+
+.spawning-alert{
+
+    background:#fff3cd;
+
+    color:#664d03;
+
+    border:1px solid #ffe69c;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    margin-bottom:20px;
+
+}
+
+/* Graph */
+
+.graph-placeholder{
+
+    height:400px;
+
+    border:2px dashed #ced4da;
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:white;
+
+    color:#6c757d;
+
+    font-size:20px;
+
+}
+
+/* Table */
+
+.table{
+
+    margin-bottom:0;
+
+}
+
+.table thead{
+
+    background:#f8f9fa;
+
+}
+
+.table th{
+
+    font-weight:600;
+
+}
+
+/* Form */
+
+.form-control,
+.form-select{
+
+    border-radius:10px;
+
+}
+
+.form-control:focus,
+.form-select:focus{
+
+    border-color:#86b7fe;
+
+    box-shadow:none;
+
+}
+
+/* Button */
+
+.btn{
+
+    border-radius:10px;
+
+}
+
+/* Badge */
+
+.badge{
+
+    border-radius:10px;
+
+}
