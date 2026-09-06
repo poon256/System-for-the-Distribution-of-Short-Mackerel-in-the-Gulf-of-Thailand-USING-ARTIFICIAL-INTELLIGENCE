@@ -38,8 +38,6 @@ $months = [
 
 $province_list = [
 
-    "กรุงเทพมหานคร",
-
     "สมุทรปราการ",
 
     "สมุทรสาคร",
@@ -48,9 +46,7 @@ $province_list = [
 
     "เพชรบุรี",
 
-    "ชลบุรี",
-
-    "ฉะเชิงเทรา"
+    "ชลบุรี"
 
 ];
 
@@ -89,7 +85,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     else {
 
-        $python = "python";
+        $python = "C:\\Users\\Admin\\AppData\\Local\\Python\\bin\\python.exe";
 
         $script = realpath(
             "../model/Classification_RandomForest.py"

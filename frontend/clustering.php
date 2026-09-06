@@ -16,7 +16,6 @@ session_start();
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <style>
     #map { height: 500px; width: 100%; }
-    /* สไตล์สำหรับกล่องคำอธิบายสัญลักษณ์บนแผนที่ (Legend) */
     .legend {
         padding: 6px 10px;
         font: 14px/16px Arial, Helvetica, sans-serif;
@@ -211,9 +210,6 @@ data.forEach(function(r){
     if(r.cluster == 0){ 
         color = "red";    // วิกฤต,ปลาน้อย
     } 
-    else if(r.cluster == 1){ 
-        color = "orange";   // ปานกลาง
-    } 
     else{ 
         color = "blue";    // ปลาชุกชุม
     } 
@@ -244,8 +240,8 @@ data.forEach(function(r){
 var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend'),
-        labels = ['วิกฤต/ปลาน้อย', 'ปานกลาง', 'ปลาชุกชุม'],
-        colors = ['red', 'orange', 'blue'];
+        labels = ['วิกฤต/ปลาน้อย', 'ปลาชุกชุม'],
+        colors = ['red','blue'];
 
     div.innerHTML = '<b>ระดับสภาวะกลุ่ม</b><br>';
     for (var i = 0; i < colors.length; i++) {

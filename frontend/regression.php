@@ -6,7 +6,9 @@ if (isset($_GET['graph'])) {
     $allowedGraphs = [
         'fish' => 'regression_fish.png',
         'sst' => 'regression_sst.png',
-        'chlor' => 'regression_chlor.png'
+        'chlor' => 'regression_chlor.png',
+        'rainfall' => 'regression_rainfall.png',
+        'wind' => 'regression_wind.png'
     ];
 
     $graphKey = (string)$_GET['graph'];
@@ -106,13 +108,11 @@ $months = [
 ];
 
 $provinceList = [
-    'กรุงเทพมหานคร',
     'สมุทรปราการ',
     'สมุทรสาคร',
     'สมุทรสงคราม',
     'เพชรบุรี',
-    'ชลบุรี',
-    'ฉะเชิงเทรา'
+    'ชลบุรี'
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($province === '' || $year < 2562 || $year > 2570 || $month < 1 || $month > 12) {
         $error = 'กรุณาเลือกจังหวัด ปี (2562-2570) และเดือนให้ถูกต้อง';
     } else {
-        $python = getenv('PROJECTA_PYTHON') ?: 'python';
+        $python = 'C:\Users\Admin\AppData\Local\Python\bin\python.exe';
         $script = realpath(
             __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR .
             'model' . DIRECTORY_SEPARATOR . 'Regression_Linear.py'
@@ -361,6 +361,20 @@ $sourceCounts = $result['source_counts'] ?? [];
                     class="img-fluid"
                     alt="Chlorophyll-a graph"
                 >
+
+                <h4>RainFall</h4>
+                <img
+                    src="regression.php?graph=rainfall&amp;v=<?= time() ?>"
+                    class="img-fluid"
+                    alt="RainFall graph"
+                >
+
+                <h4>Wind</h4>
+                <img
+                    src="regression.php?graph=wind&amp;v=<?= time() ?>"
+                    class="img-fluid"
+                    alt="Wind graph"
+                >
             <?php else: ?>
                 <div class="graph-placeholder">
                     เลือกเดือน ปี จังหวัด แล้วกด Predict เพื่อแสดงกราฟ
@@ -446,6 +460,13 @@ $sourceCounts = $result['source_counts'] ?? [];
                     · SST ที่เติม <?= h($sourceCounts['sst_imputed_months'] ?? 0) ?> เดือน
                     · Chlorophyll-a ที่เติม <?= h($sourceCounts['chlorophyll_a_imputed_months'] ?? 0) ?> เดือน
                 </div>
+
+                <div class="small text-muted mt-3">
+                    ข้อมูล Rain และ Wind ที่เป็นค่าว่างหรือ 0 จะเติมจากเดือนเดียวกันของปีอื่นในจังหวัดเดียวกัน
+                    · Rain ที่เติม <?= h($sourceCounts['rain_imputed_months'] ?? 0) ?> เดือน
+                    · Wind ที่เติม <?= h($sourceCounts['wind_a_imputed_months'] ?? 0) ?> เดือน
+                </div>
+                
             <?php endif; ?>
         </div>
     </div>

@@ -1,6 +1,6 @@
 ﻿name,target_transform,model_type,alpha,n_components,blend_weight,rmse,mae,r2
-"PLS Environment Relationship components=2, weight=0.75",none,pls,0.0,2,0.75,67.7628,45.3652,0.002417
-Ecology Relationship OLS + 50% Baseline,none,ols,0.0,0,0.5,68.7283,48.1656,-0.026215
-Environment Relationship OLS + 50% Baseline,none,ols,0.0,0,0.5,68.7378,47.3755,-0.026499
-"PLS Environment Relationship components=2, weight=0.50",none,pls,0.0,2,0.5,68.821,47.978,-0.028983
-"PLS Environment Relationship components=3, weight=0.50",none,pls,0.0,3,0.5,69.1379,48.9353,-0.038483
+"Environment-Combined Ridge alpha=100, weight=0.50",none,ridge,100.0,0,0.5,8.6799,7.0223,0.237814
+"Environment-Lag Ridge alpha=100, weight=0.75",none,ridge,100.0,0,0.75,9.013,7.6864,0.178208
+"Environment-Lag Ridge alpha=1000, weight=0.75",none,ridge,1000.0,0,0.75,9.1614,8.1286,0.150918
+"Environment-Combined Ridge alpha=10, weight=0.50",none,ridge,10.0,0,0.5,9.2749,7.2679,0.129739
+"Environment-Lag Ridge alpha=10, weight=0.75",none,ridge,10.0,0,0.75,9.3996,7.6242,0.106198
