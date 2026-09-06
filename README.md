@@ -3,7 +3,7 @@
 ระบบวิเคราะห์และคาดการณ์จำนวนปลาทูในอ่าวไทยตอนบน
 ด้วยเทคนิค Machine Learning
 
-เป็นโปรเจคของมหาลัยที่ผมได้ทำ
+เป็นโปรเจคของมหาลัยที่ผมได้ทำ โดยช่วยกันทำ3คน
 
 ## Features
 
@@ -101,35 +101,6 @@ Machine Learning
 ↓
 Web Dashboard
 
-## Project Structure
-
-projectA/
-│
-├── model/
-│   ├── linear_regression.py
-│   ├── random_forest.py
-│   └── k_means.py
-│
-├── preprocessing/
-│   └── ...
-│
-├── process/
-│   └── ...
-│
-├── database/
-│   └── database.sql
-│
-├── dashboard/
-│   └── ...
-│
-├── data/
-│   └── README.md
-│
-├── docs/
-│   └── ...
-│
-├── requirements.txt
-└── README.md
 
 ## Clustering Result
 
