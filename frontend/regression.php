@@ -127,7 +127,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($province === '' || $year < 2562 || $year > 2570 || $month < 1 || $month > 12) {
         $error = 'กรุณาเลือกจังหวัด ปี (2562-2570) และเดือนให้ถูกต้อง';
     } else {
-        $python = 'C:\Users\Admin\AppData\Local\Python\bin\python.exe';
+        $python = realpath(__DIR__ . '/../.venv/Scripts/python.exe');
         $script = realpath(
             __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR .
             'model' . DIRECTORY_SEPARATOR . 'Regression_Linear.py'
